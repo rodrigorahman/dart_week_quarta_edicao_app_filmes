@@ -20,4 +20,10 @@ class LoginRepositoryImpl implements LoginRepository {
     throw Exception('Erro ao realizar login com Google');
   }
 
+  @override
+  Future<void> logout() async {
+    await GoogleSignIn().signOut();
+    FirebaseAuth.instance.signOut();
+  }
+
 }
