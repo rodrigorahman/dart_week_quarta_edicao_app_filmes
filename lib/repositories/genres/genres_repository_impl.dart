@@ -15,6 +15,8 @@ class GenresRepositoryImpl implements GenresRepository {
   Future<List<GenreModel>> getGenres() async {
     final result = await _restClient.get<List<GenreModel>>(
       '/genre/movie/list',
+      contentType: 'text/plain',
+      
       query: {
         'api_key': RemoteConfig.instance.getString('api_token'),
         'language' : 'pt-br'

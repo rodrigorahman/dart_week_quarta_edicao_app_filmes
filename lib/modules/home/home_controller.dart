@@ -5,6 +5,7 @@ class HomeController extends GetxController {
   static const NAVIGATOR_KEY = 1;
   static const INDEX_PAGE_EXIT = 2;
   final LoginService _loginService;
+  var name = ''.obs;
 
   HomeController({
     required LoginService loginService,

@@ -21,6 +21,9 @@ class MovieCast extends StatelessWidget {
               width: 85,
               height: 85,
               fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace){
+                return SizedBox.shrink();
+              },
             ),
           ),
           Text(
